@@ -133,7 +133,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
 
             <div className="border-t-2 border-gray-200 pt-4">
               <p className="text-center text-gray-600 italic">
-                Que tus replies fluyan y tus partners no ghosteen 🎄
+                { littleMessages[Math.floor(Math.random() * littleMessages.length)] }
               </p>
               <p className="text-center text-xs text-gray-400 mt-2">
                 ID válida hasta que se acabe el drama • Secret Santa 2025
