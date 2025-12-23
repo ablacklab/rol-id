@@ -15,29 +15,24 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-800">
-          🎄 Secret Santa Rolero 🎄
+          🎄 Secret Santa 🎄
         </h1>
 
         <div className="space-y-4 text-gray-700 leading-relaxed mb-8">
           <p className="text-center text-lg">
-            ¡Hola, rolero/a!
+            Hola Connor!
           </p>
 
           <p>
-            Este año, tu Secret Santa ha preparado algo especial para ti:
-            <strong> tu propio carnet de roleplay oficial</strong>.
-            Porque después de tantas replies, dramas y personajes inolvidables,
-            te mereces un reconocimiento en toda regla.
+            No sabía tus gustos, pero sí que eres parte de este caos creativo llamado rolplay. Así que te dejo algo para usar, reírte o molestar a otros.
           </p>
 
           <p>
-            Completa este formulario rápido y genera tu ID personalizada
-            con las insignias que mejor te representen como rolero/a.
-            Podrás descargarla y presumirla donde quieras.
+            Feliz Navidad
           </p>
 
           <p className="text-center font-medium text-emerald-700">
-            Que tus replies fluyan y tus partners no ghosteen este 2025. 🎁
+            — Tu Secret Santa 🎁
           </p>
         </div>
 
