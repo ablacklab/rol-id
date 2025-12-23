@@ -79,7 +79,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex items-center justify-center p-6">
       <div className="flex justify-center overflow-x-auto">
-        <div  style={{ transform: `scale(${scale})`, transformOrigin: 'top center'}} className='bg-red' >
+        <div  style={{ transform: `scale(${scale})`, transformOrigin: 'top center'}} >
         <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 mb-8 w-[900px] h-[550px] flex flex-col justify-between" id="rol-id">
           <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
             <div className="text-center mb-6">
