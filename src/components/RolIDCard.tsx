@@ -68,7 +68,17 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex items-center justify-center p-6">
       <div className="max-w-4xl w-full">
-        <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 mb-6" id="rol-id">
+        <div ref={cardRef} className="
+    bg-white
+    rounded-2xl
+    shadow-2xl
+    p-8
+    w-[900px]
+    h-[550px]
+    flex
+    flex-col
+    justify-between
+  " id="rol-id">
           <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
             <div className="text-center mb-6">
               <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-2">
