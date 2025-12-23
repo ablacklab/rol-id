@@ -84,7 +84,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 mb-6">
+            <div className="flex flex-row gap-6 mb-6">
               <div className="flex-shrink-0">
                 {formData.photo && (
                   <img
