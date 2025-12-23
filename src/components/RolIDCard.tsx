@@ -66,110 +66,99 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex flex-col items-center justify-center p-4 sm:p-6">
-      <div className="w-full flex items-center justify-center mb-6" style={{ perspective: '1000px' }}>
-        <div
-          style={{
-            width: '100%',
-            maxWidth: '1000px',
-            aspectRatio: '16 / 9',
-            transformOrigin: 'center',
-            transform: 'scale(min(1, calc(100vw / 1100)))',
-            marginBottom: 'calc(200px * (1 - min(1, calc(100vw / 1100))))'
-          }}
-        >
-          <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl h-full flex flex-col" id="rol-id">
-            <div className="border-4 border-double border-emerald-600 rounded-xl p-6 h-full flex flex-col">
-              <div className="text-center mb-3">
-                <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-4 py-1 rounded-full text-xs font-bold mb-1">
-                  EDICIÓN NAVIDAD 2025
-                </div>
-                <h1 className="text-2xl font-bold text-gray-800">
-                  Rolerx Oficial
-                </h1>
-                <div className="flex justify-center gap-1 mt-1">
-                  <span className="text-lg">🎄</span>
-                  <span className="text-lg">✨</span>
-                  <span className="text-lg">🎭</span>
-                </div>
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex items-center justify-center p-6">
+      <div className="max-w-4xl w-full">
+        <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 mb-6" id="rol-id">
+          <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
+            <div className="text-center mb-6">
+              <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-2">
+                EDICIÓN NAVIDAD 2025
+              </div>
+              <h1 className="text-3xl font-bold text-gray-800">
+                Rolerx Oficial
+              </h1>
+              <div className="flex justify-center gap-2 mt-2">
+                <span className="text-2xl">🎄</span>
+                <span className="text-2xl">✨</span>
+                <span className="text-2xl">🎭</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-6 mb-6">
+              <div className="flex-shrink-0">
+                {formData.photo && (
+                  <img
+                    src={formData.photo}
+                    alt={formData.name}
+                    className="w-48 h-48 object-cover rounded-xl border-4 border-gray-200 mx-auto"
+                  />
+                )}
               </div>
 
-              <div className="flex gap-4 flex-1">
-                <div className="flex-shrink-0">
-                  {formData.photo && (
-                    <img
-                      src={formData.photo}
-                      alt={formData.name}
-                      className="h-32 w-32 object-cover rounded-lg border-3 border-gray-200"
-                    />
-                  )}
+              <div className="flex-1 space-y-4">
+                <div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wide font-semibold">Nombre</div>
+                  <div className="text-2xl font-bold text-gray-800">{formData.name}</div>
                 </div>
 
-                <div className="flex-1 flex flex-col justify-between min-w-0">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold">Nombre</div>
-                    <div className="text-xl font-bold text-gray-800 truncate">{formData.name}</div>
+                    <div className="text-sm text-gray-500 uppercase tracking-wide font-semibold">Pronombres</div>
+                    <div className="text-lg text-gray-700">{getPronounsLabel(formData.pronouns)}</div>
                   </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold">Pronombres</div>
-                      <div className="text-sm text-gray-700">{getPronounsLabel(formData.pronouns)}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold">Experiencia</div>
-                      <div className="text-sm text-gray-700">{getExperienceLabel(formData.experience)}</div>
-                    </div>
-                  </div>
-
                   <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
-                      Insignias
-                    </div>
-                    <div className="flex flex-wrap gap-1">
-                      {selectedBadgesData.map(badge => (
-                        <div
-                          key={badge.id}
-                          className="flex items-center gap-1 bg-gradient-to-r from-emerald-50 to-red-50 px-2 py-1 rounded border border-emerald-200 text-xs whitespace-nowrap"
-                        >
-                          <span className="text-sm">{badge.badge.emoji}</span>
-                          <span className="font-medium text-gray-800 hidden sm:inline">{badge.badge.title}</span>
-                        </div>
-                      ))}
-                    </div>
+                    <div className="text-sm text-gray-500 uppercase tracking-wide font-semibold">Experiencia</div>
+                    <div className="text-lg text-gray-700">{getExperienceLabel(formData.experience)}</div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wide font-semibold mb-2">
+                    Insignias Obtenidas
+                  </div>
+                  <div className="space-y-2">
+                    {selectedBadgesData.map(badge => (
+                      <div
+                        key={badge.id}
+                        className="flex items-center gap-2 bg-gradient-to-r from-emerald-50 to-red-50 px-3 py-2 rounded-lg border border-emerald-200"
+                      >
+                        <span className="text-2xl">{badge.badge.emoji}</span>
+                        <span className="font-medium text-gray-800">{badge.badge.title}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="border-t-2 border-gray-200 pt-2 mt-3">
-                <p className="text-center text-gray-600 italic text-xs leading-tight">
-                  { phrases[Math.floor(Math.random() * phrases.length)] }
-                </p>
-                <p className="text-center text-xs text-gray-400 mt-1">
-                  ID válida hasta que se acabe el drama • Secret Santa 2025
-                </p>
-              </div>
+            <div className="border-t-2 border-gray-200 pt-4">
+              <p className="text-center text-gray-600 italic">
+                { phrases[Math.floor(Math.random() * phrases.length)] }
+              </p>
+              <p className="text-center text-xs text-gray-400 mt-2">
+                ID válida hasta que se acabe el drama • Secret Santa 2025
+              </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
-        <button
-          onClick={handleDownload}
-          className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg"
-        >
-          <Download className="w-6 h-6" />
-          Descargar mi ID
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={handleDownload}
+            className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg"
+          >
+            <Download className="w-6 h-6" />
+            Descargar mi ID
+          </button>
 
-        <button
-          onClick={onReset}
-          className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg border-2 border-gray-300"
-        >
-          <RotateCcw className="w-6 h-6" />
-          Crear otra ID
-        </button>
+          <button
+            onClick={onReset}
+            className="flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-800 font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg border-2 border-gray-300"
+          >
+            <RotateCcw className="w-6 h-6" />
+            Crear otra ID
+          </button>
+        </div>
       </div>
     </div>
   );
