@@ -166,7 +166,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
             Crear otra ID
           </button>
         </div>
-          </div>
+      </div>
       </div>
     </div>
   );
