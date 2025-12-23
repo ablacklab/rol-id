@@ -9,6 +9,16 @@ interface RolIDCardProps {
   onReset: () => void;
 }
 
+const getScale = () => {
+  if (typeof window === 'undefined') return 1;
+  const width = window.innerWidth;
+  if (width < 420) return 0.6;
+  if (width < 640) return 0.75;
+  if (width < 768) return 0.85;
+  return 1;
+};
+
+
 const phrases = [
   'Que tus replies fluyan y tu partner no ghostee 🎄',
   'Que Santa te traiga inspiración y respuestas a tiempo 🎁',
