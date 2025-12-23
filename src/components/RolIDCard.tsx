@@ -10,10 +10,10 @@ interface RolIDCardProps {
 }
 
 const phrases = [
-  'Que tus replies fluyan y tus partners no ghosteen 🎄',
+  'Que tus replies fluyan y tu partner no ghostee 🎄',
   'Que Santa te traiga inspiración y respuestas a tiempo 🎁',
-  'Que este diciembre venga con musas activas y chats vivos ✨',
-  'Que tus drafts se escriban solos y tus partners aparezcan 🎄',
+  'Que este diciembre venga con chats vivos ✨',
+  'Que tus drafts se escriban solos y tu partner aparezca 🎄',
   'Que nunca falte inspiración ni replies pendientes (bueno, tal vez sí)',
   'Que el espíritu navideño desbloquee tu mejor reply'
 ]
