@@ -153,6 +153,8 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
             </div>
           </div>
         </div>
+      </div>
+          
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
@@ -171,7 +173,6 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
             Crear otra ID
           </button>
         </div>
-      </div>
       </div>
     </div>
   );
