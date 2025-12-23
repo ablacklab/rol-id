@@ -9,8 +9,8 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex items-center justify-center p-6">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
         <div className="flex justify-center mb-6">
-          <div className="bg-red-100 p-4 rounded-full">
-            <Gift className="w-12 h-12 text-red-600" />
+          <div className="bg-emerald-100 p-4 rounded-full">
+            <Gift className="w-12 h-12 text-white" />
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
         <button
           onClick={onStart}
-          className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-lg"
+          className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 text-lg"
         >
           Comenzar
         </button>
