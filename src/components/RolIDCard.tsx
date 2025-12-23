@@ -82,13 +82,10 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
         <div  style={{ transform: `scale(${scale})`, transformOrigin: 'top center'}} >
         <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 w-[900px] flex flex-col justify-between" id="rol-id">
           <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
-            <div className="text-center mb-6">
+            <div className="text-center mb-6 flex flex-row items-center justify-between gap-4 w-full">
               <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-2">
                 EDICIÓN NAVIDAD 2025
               </div>
-              <h1 className="text-3xl font-bold text-gray-800">
-                Rolerx Oficial
-              </h1>
               <div className="flex justify-center gap-2 mt-2">
                 <span className="text-2xl">🎄</span>
                 <span className="text-2xl">✨</span>
