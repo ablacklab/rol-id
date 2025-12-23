@@ -31,6 +31,8 @@ const phrases = [
 export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const scale = getScale();
+
+  console.log(scale)
   
   const selectedBadgesData = badges.filter(badge =>
     formData.selectedBadges.includes(badge.id)
