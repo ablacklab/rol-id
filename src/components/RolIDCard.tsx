@@ -9,6 +9,15 @@ interface RolIDCardProps {
   onReset: () => void;
 }
 
+const phrases = [
+  'Que tus replies fluyan y tus partners no ghosteen 🎄',
+  'Que Santa te traiga inspiración y respuestas a tiempo 🎁',
+  'Que este diciembre venga con musas activas y chats vivos ✨',
+  'Que tus drafts se escriban solos y tus partners aparezcan 🎄',
+  'Que nunca falte inspiración ni replies pendientes (bueno, tal vez sí)',
+  'Que el espíritu navideño desbloquee tu mejor reply'
+]
+
 export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -63,10 +72,10 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
           <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
             <div className="text-center mb-6">
               <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-2">
-                EDICIÓN NAVIDAD 2024
+                EDICIÓN NAVIDAD 2025
               </div>
               <h1 className="text-3xl font-bold text-gray-800">
-                Rolero/a Oficial
+                Rolerx Oficial
               </h1>
               <div className="flex justify-center gap-2 mt-2">
                 <span className="text-2xl">🎄</span>
@@ -127,7 +136,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
                 Que tus replies fluyan y tus partners no ghosteen 🎄
               </p>
               <p className="text-center text-xs text-gray-400 mt-2">
-                ID válida hasta que se acabe el drama • Secret Santa Roleplay
+                ID válida hasta que se acabe el drama • Secret Santa 2025
               </p>
             </div>
           </div>
