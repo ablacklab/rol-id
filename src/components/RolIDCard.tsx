@@ -9,13 +9,11 @@ interface RolIDCardProps {
   onReset: () => void;
 }
 
+const CARD_WIDTH = 900;
+
 const getScale = () => {
   if (typeof window === 'undefined') return 1;
-  const width = window.innerWidth;
-  if (width < 420) return 0.6;
-  if (width < 640) return 0.4;
-  if (width < 768) return 0.85;
-  return 1;
+  return Math.min(1, window.innerWidth / CARD_WIDTH);
 };
 
 
@@ -79,10 +77,10 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-red-50 flex items-center justify-center p-6">
-      <div className="flex justify-center overflow-x-auto flex-col">
+    <div className="w-full overflow-x-hidden bg-gradient-to-br from-emerald-50 to-red-50 flex justify-center items-start p-6">
+      <div className="flex flex-col justify-center gap-0">
         <div  style={{ transform: `scale(${scale})`, transformOrigin: 'top center'}} >
-        <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 mb-8 w-[900px] h-[550px] flex flex-col justify-between" id="rol-id">
+        <div ref={cardRef} className="bg-white rounded-2xl shadow-2xl p-8 w-[900px] flex flex-col justify-between" id="rol-id">
           <div className="border-4 border-double border-emerald-600 rounded-xl p-6">
             <div className="text-center mb-6">
               <div className="inline-block bg-gradient-to-r from-emerald-600 to-red-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-2">
@@ -158,7 +156,7 @@ export default function RolIDCard({ formData, onReset }: RolIDCardProps) {
       </div>
           
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col gap-6 items-center w-full">
           <button
             onClick={handleDownload}
             className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-xl transition-colors text-lg shadow-lg"
